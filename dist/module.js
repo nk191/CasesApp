@@ -1,0 +1,1 @@
+var crudModule;!function(){crudModule=angular.module("crudModule",[])}();

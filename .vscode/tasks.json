@@ -1,0 +1,19 @@
+{  
+    "version": "0.1.0", 
+    "isShellCommand": true,
+    "showOutput": "always",
+    "command": "IE",  
+    "windows": {  
+        "command": "explorer.exe"  
+    },   
+            "args": ["index.html"]
+    /*"tasks": [
+        
+        {
+			"taskName": "compress",
+			"isBuildCommand": true,
+			"showOutput": "always"
+		}
+    ]*/
+     
+}

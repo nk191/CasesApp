@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Operation in AngularJS</title>
+    <meta charset="utf-8">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/adal-angular/lib/adal.js"></script>
+    <script src="node_modules/adal-angular/dist/adal-angular.min.js"></script>
+       <script src="module.js"></script>
+    <script src="service.js"></script>
+    <script src="controller.js"></script>
+    
+    <link rel="stylesheet" href="stylesheet.css">-->
+   
+</head>
+<body>
+    <!--<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			
+			<a class="navbar-brand" href="#" style="width=100%">Cases in CRM</a>
+		</div>
+	</div>
+    </nav>
+    </br>
+    <ul class="nav navbar-nav">
+                    <li ng-class="{ active: isActive('/') }"><a href="#/">View Cases</a></li>
+
+                </ul>
+    <div>
+        <div ng-view></div>
+    </div>-->
+    <section class="container-fluid">
+	
+    <div ng-app="crudModule" 
+        ng-controller="myController">
+
+        <div class="container-fluid">
+           
+            <label>{{caseId}}</label>
+            <ul>
+                <li><input name="title" type="text" class="col-xs-12"
+                    ng-model="title" 
+                        placeholder="Enter the title" /></li>
+            </ul>
+            <ul>
+                <li><input name="status" type="text" class="col-xs-12"
+                    ng-model="status" 
+                        placeholder="Enter the status" /></li>
+            </ul>
+            <ul>
+                <li><input name="date" type="text" class="col-xs-12"
+                    ng-model="date" 
+                        placeholder="Enter the date" /></li>
+            </ul>
+            <ul>
+                <li><input name="resolveDate" type="text" class="col-xs-12"
+                    ng-model="resolveDate" 
+                        placeholder="Enter the resolve date" /></li>
+            </ul>
+ 
+          
+            <p>
+                <button id="save"  class="btn btn-primary" ng-click="save()">Save case</button>
+                <button id="update" class="btn btn-primary" ng-click="update()">Update case</button>
+            </p>
+
+            <hr/>
+  
+
+           
+            <table class="table table-inverse table-bordered table-hover" style="width:100%">
+                <tr class="danger">
+                    <th class="text-center">ID</th>
+                    <th class="text-center">Title</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Date</th>
+                    <th class="text-center">Resolve Date</th>
+                </tr>
+                <tr ng-repeat="cases in Cases" ng-click="edit(cases)" class="success">
+                    <td>{{ cases.caseId }}</td>
+                    <td>{{ cases.title }}</td>
+                    <td>{{ cases.status }}</td>
+                    <td>{{ cases.date }}</td>
+                    <td>{{ cases.resolveDate }}</td>
+
+                    <td><button id="delete" ng-click="del(cases)">Delete</button></td>
+                    
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <!--</article>-->
+    </section>
+</body>
+</html>

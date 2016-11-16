@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Operation in AngularJS</title>
+    
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/adal-angular/lib/adal.js"></script>
+    <script src="node_modules/adal-angular/dist/adal-angular.min.js"></script>
+       <script src="module.js"></script>
+    <script src="service.js"></script>
+    <script src="controller.js"></script>
+   <link rel="stylesheet" href="stylesheet.css">
+    <link rel="shortcut icon" href="">
+</head>
+<body ng-app="crudModule">
+    <nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>-->
+			<a class="navbar-brand" href="#" style="width=100%">Cases in CRM</a>
+		</div>
+	</div>
+    </nav>
+    </br>
+    
+   <!-- <a href="#/Cases">View Cases</a>-->
+    <ul class="nav navbar-nav">
+                    <li ng-class="{ active: isActive('/Cases') }"><a href="#/Cases"></a></li>
+
+                </ul>
+    <div>
+        <div ng-view></div>
+    </div>            
+</body>
+</html>
